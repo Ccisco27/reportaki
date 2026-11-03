@@ -1,0 +1,136 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/feed.css">
+        <title>Publicações | Reportaki</title>
+    </head>
+
+    <body>
+        <header class="site-header">
+            <a class="brand" href="home.html">Reportaki</a>
+
+            <nav class="site-nav" aria-label="Navegação principal">
+                <a href="home.html">Início</a>
+
+                <a href="busca.html">Buscar cidade</a>
+
+                <a href="feed.html" aria-current="page">Feed</a>
+
+                <a href="perfil.html">Perfil</a>
+            </nav>
+        </header>
+
+        <main class="page-container page-content feed-page">
+            <div class="page-heading feed-heading">
+                <div>
+                    <span class="eyebrow">Acompanhe sua comunidade</span>
+
+                    <h1>Publicações</h1>
+
+                    <p id="feedSubtitle">Acompanhe os problemas de Jundiaí.</p>
+                </div>
+            </div>
+
+            <section class="filter-panel" aria-label="Filtros do feed">
+                <label class="filter-field">
+                    <span>Categoria</span>
+
+                    <select id="feedCategoria">
+                        <option value="todas">Todas as categorias</option>
+
+                        <option value="lixo">Lixo</option>
+
+                        <option value="buraco">Buraco</option>
+
+                        <option value="iluminacao">Iluminação</option>
+                    </select>
+                </label>
+
+                <div class="status-filter" role="group" aria-label="Filtrar por status">
+                    <button type="button" class="feed-tab ativa" data-status="todas" aria-pressed="true">Todas</button>
+
+                    <button type="button" class="feed-tab" data-status="nao-iniciado" aria-pressed="false">Não iniciados</button>
+
+                    <button type="button" class="feed-tab" data-status="iniciado" aria-pressed="false">Iniciados</button>
+
+                    <button type="button" class="feed-tab" data-status="finalizado" aria-pressed="false">Finalizados</button>
+                </div>
+            </section>
+
+            <section id="feedPosts" class="feed-posts" aria-live="polite">
+                <!-- POST 1 -->
+                <article class="feed-post" data-categoria="lixo" data-status="nao-iniciado" data-cidade="Jundiaí">
+                    <img class="post-photo" src="../img/lixo.png" alt="Foto do acúmulo de lixo na calçada" loading="lazy">
+
+                    <div class="feed-post-info">
+                        <div class="post-meta">
+                            <span class="feed-tag tag-lixo">Lixo</span>
+                            <span class="feed-status status-nao-iniciado">Não iniciado</span>
+                        </div>
+
+                        <h2>Acúmulo de lixo na calçada</h2>
+
+                        <p>Resíduos acumulados perto de uma área de circulação de pedestres.</p>
+
+                        <div class="post-footer">
+                            <span>Jundiaí, Rua Aleatória, N° 1234 | 01/11/2026 | 12:00</span>
+
+                            <button type="button" class="button btn-alterar-status">Alterar status</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- POST 2 -->
+                <article class="feed-post" data-categoria="buraco" data-status="iniciado" data-cidade="Jundiaí">
+                    <img class="post-photo" src="../img/buraco.png" alt="Foto do buraco na via" loading="lazy">
+
+                    <div class="feed-post-info">
+                        <div class="post-meta">
+                            <span class="feed-tag tag-buraco">Buraco</span>
+                            <span class="feed-status status-iniciado">Iniciado</span>
+                        </div>
+
+                        <h2>Buraco na via</h2>
+
+                        <p>Trecho danificado que pode dificultar a passagem de veículos. O reparo está em andamento.</p>
+
+                        <div class="post-footer">
+                            <span>Jundiaí, Rua Aleatória, N° 1234 | 01/11/2026 | 12:00</span>
+
+                            <button type="button" class="button btn-alterar-status">Alterar status</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- POST 3 -->
+                <article class="feed-post" data-categoria="iluminacao" data-status="finalizado" data-cidade="Jundiaí">
+                    <img class="post-photo" src="../img/fatec-jundiai.jpg" alt="Foto da região onde está o poste" loading="lazy">
+
+                    <div class="feed-post-info">
+                        <div class="post-meta">
+                            <span class="feed-tag tag-iluminacao">Iluminação</span>
+                            <span class="feed-status status-finalizado">Finalizado</span>
+                        </div>
+
+                        <h2>Poste sem iluminação</h2>
+
+                        <p>A manutenção do poste foi concluída e a iluminação está funcionando novamente.</p>
+
+                        <div class="post-footer">
+                            <span>Jundiaí, Rua Aleatória, N° 1234 | 01/11/2026 | 12:00</span>
+
+                            <button type="button" class="button btn-alterar-status">Alterar status</button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <p id="feedSemResultados" class="empty-state" hidden>Nenhuma publicação encontrada com esses filtros.</p>
+        </main>
+
+        <script src="../js/sessao.js" defer></script>
+
+        <script src="../js/feed.js" defer></script>
+    </body>
+</html>
