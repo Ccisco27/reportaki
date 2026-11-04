@@ -1,0 +1,78 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/busca.css">
+        <title>Buscar cidade | Reportaki</title>
+    </head>
+
+    <body data-bloqueia="prefeitura">
+        <header class="site-header">
+            <a class="brand" href="home.html">Reportaki</a>
+
+            <nav class="site-nav" aria-label="Navegação principal">
+                <a href="home.html">Início</a>
+
+                <a href="busca.html" aria-current="page">Buscar cidade</a>
+
+                <a href="feed.html">Feed</a>
+
+                <a href="perfil.html">Perfil</a>
+            </nav>
+        </header>
+
+        <main class="page-container page-content">
+            <div class="page-heading">
+                <span class="eyebrow">Explore sua região</span>
+
+                <h1>Buscar cidade</h1>
+
+                <p>Pesquise uma cidade ou selecione uma das opções abaixo para abrir o Feed.</p>
+            </div>
+
+            <div class="search-row">
+                <input type="search" id="pesquisa" placeholder="Pesquisar cidade..." aria-label="Pesquisar cidade">
+            </div>
+
+            <div id="resultados" class="city-grid">
+                <button class="city-card item" type="button" data-cidade="Jundiaí">
+                    <span class="city-symbol">JD</span>
+
+                    <span>Jundiaí</span>
+
+                    <span class="city-arrow">↗</span>
+                </button>
+
+                <button class="city-card item" type="button" data-cidade="São Paulo">
+                    <span class="city-symbol">SP</span>
+
+                    <span>São Paulo</span>
+
+                    <span class="city-arrow">↗</span>
+                </button>
+
+                <button class="city-card item" type="button" data-cidade="Jarinu">
+                    <span class="city-symbol">JR</span>
+
+                    <span>Jarinu</span>
+
+                    <span class="city-arrow">↗</span>
+                </button>
+
+                <button class="city-card item" type="button" data-cidade="Campo Limpo Paulista">
+                    <span class="city-symbol">CL</span>
+                    
+                    <span>Campo Limpo Paulista</span>
+                    
+                    <span class="city-arrow">↗</span>
+                </button>
+            </div>
+
+            <p id="buscaSemResultados" class="empty-state" hidden>Nenhuma cidade encontrada.</p>
+        </main>
+
+        <script src="../js/sessao.js" defer></script>
+
+        <script src="../js/busca.js" defer></script>
+    </body>
+</html>
